@@ -1,0 +1,119 @@
+{
+  "mean_detection_rate": 100.0,
+  "mean_fpr": 0.0,
+  "mean_delay_ms": 0.06719884240408881,
+  "mean_throughput_kbps": 1310.6529220038556,
+  "mean_energy_mj": 0.12605959974781014,
+  "runs": [
+    {
+      "seed": 42,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6928016208546596,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 43,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6925386113827815,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 44,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.69110637784654,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 45,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6910500503511143,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 46,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6930114444963823,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 47,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.69199142781413,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 48,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6910034163896518,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 49,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6905651597428082,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 50,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6906008672934696,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    },
+    {
+      "seed": 51,
+      "detection_rate": 100.0,
+      "fpr": 0.0,
+      "threshold": 0.0,
+      "n_malicious_truth": 10,
+      "mean_trust": 0.6927422121228853,
+      "delay_ms": 0.06719884240408881,
+      "throughput_kbps": 1310.6529220038556,
+      "energy_mj": 0.1260595997478101
+    }
+  ]
+}
