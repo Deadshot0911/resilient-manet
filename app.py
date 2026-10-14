@@ -64,6 +64,52 @@ w_bayes = st.sidebar.slider("Bayesian", 0.0, 1.0, 0.70, 0.05)
 w_ftl   = st.sidebar.slider("FTL",      0.0, 1.0, 0.10, 0.05)
 w_gatm  = st.sidebar.slider("GATM",     0.0, 1.0, 0.10, 0.05)
 w_maml  = st.sidebar.slider("MAML",     0.0, 1.0, 0.10, 0.05)
+# ============================================================
+# LIVE NS-3 CONTROLS
+# ============================================================
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🔗 Live NS-3 Controls")
+st.sidebar.caption("Connect to your local NS-3 API via ngrok")
+
+api_url = st.sidebar.text_input(
+    "ngrok API URL",
+    value="",
+    placeholder="https://abc-xyz.ngrok-free.app",
+    help="Paste your ngrok HTTPS URL here"
+)
+
+if api_url:
+    import requests as _rq
+    try:
+        _h = _rq.get(f"{api_url}/health", timeout=5).json()
+        if _h.get("ns3_exists") and _h.get("sim_script_exists"):
+            st.sidebar.success("✅ NS-3 API reachable")
+
+            _nodes = st.sidebar.number_input("NS-3 Nodes", 100, 200, 100, 10)
+            _seed = st.sidebar.number_input("NS-3 Seed", 0, 9999, 42, 1)
+            _duration = st.sidebar.number_input("Duration (s)", 5.0, 60.0, 40.0, 5.0)
+
+            if st.sidebar.button("🔴 Run Live NS-3 Simulation"):
+                with st.spinner("Running NS-3 on your PC..."):
+                    try:
+                        _r = _rq.post(
+                            f"{api_url}/run-simulation",
+                            params={"seed": int(_seed), "nodes": int(_nodes), "duration": float(_duration)},
+                            timeout=900
+                        )
+                        if _r.status_code == 200:
+                            _d = _r.json()
+                            st.sidebar.success(f"✅ Done! {_d['nodes']} nodes, {_d['malicious_count']} attacks")
+                            st.rerun()
+                        else:
+                            st.sidebar.error(f"Error {_r.status_code}: {_r.text[:100]}")
+                    except Exception as _e:
+                        st.sidebar.error(f"Request failed: {str(_e)[:80]}")
+        else:
+            st.sidebar.warning("⚠️ API up but NS-3 not found")
+    except Exception as _e:
+        st.sidebar.error(f"❌ API unreachable: {str(_e)[:60]}")
+
 run_button = st.sidebar.button("▶️ Run Simulation", type="primary", width='stretch')
 
 @st.cache_data(show_spinner=False)
